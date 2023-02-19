@@ -77,40 +77,78 @@ public:
 
 class Enemy : public GameObject
 {
-public:
-    int health;
-
 private:
-    void EnemyAttack();
-    void Taunt();
 
-    void SetEnemyAttack( const int enemyattack)
+    int eHealth;
+    int eTaunt;
+    int eAttack;
+
+public:
+
+    virtual void NormalAttack() override;
+    virtual void TauntPlayer() = 0;
+
+    void SetEnemyAttack(int enemyattack)
     {
-	    
+        eAttack = enemyattack;
     }
-    void SetTaunt()
+    void SetTauntPlayer(int enemytaunt)
     {
-	    
+        eTaunt = enemytaunt;
     }
-    void SetEnemyHealth()
+    void SetEnemyHealth(int enemyhealth)
     {
-	    
+        eHealth = enemyhealth;
+    }
+
+     int GetEnemyAttack()
+    {
+        return eAttack;
+    }
+    int GetEnemyHealth() const
+    {
+        return eHealth;
+    }
+    int GetEnemyTaunt() const
+    {
+        return eTaunt;
     }
    
 };
 
 class Orc : public Enemy
 {
-public:
-
-
 private:
+    string speciesName = "Orc";
+    int tauntAmount;
+
+public:
+    virtual void TauntPlayer() override;
+    int GetTauntAmount() const
+    {
+        return tauntAmount;
+    }
+    void SetTauntAmount(const int amount)
+    {
+        tauntAmount = amount;
+    }
 
 };
 
 class Undead : public Enemy
 {
-public:
-
 private:
+    string speciesName = "Undead";
+    int tauntAmount;
+public:
+    virtual void TauntPlayer() override;
+    int GetTauntAmount() const
+    {
+        return tauntAmount;
+    }
+    void SetTauntAmount(const int amount)
+    {
+        tauntAmount = amount;
+    }
+
 };
