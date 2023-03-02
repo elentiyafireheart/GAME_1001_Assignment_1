@@ -1,12 +1,9 @@
-#include <iomanip>
-
-#include "GameObject.h"
-
+#pragma once
+#include <string>
+#include "Enemy.h"
 using namespace std;
 
-
-
-class Undead2 : public Enemy
+class Undead : public Enemy
 {
 private:
     string speciesName = "Undead";
@@ -23,3 +20,4 @@ public:
     }
 
 };
+

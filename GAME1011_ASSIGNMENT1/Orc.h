@@ -1,16 +1,12 @@
-#include <iomanip>
-
-#include "GameObject.h"
-
+#pragma once
+#include "Enemy.h"
 using namespace std;
-
-
-
-class Undead2 : public Enemy
+class Orc : public Enemy
 {
 private:
-    string speciesName = "Undead";
+    string speciesName = "Orc";
     int tauntAmount;
+
 public:
     virtual void TauntPlayer() override;
     int GetTauntAmount() const
@@ -23,3 +19,4 @@ public:
     }
 
 };
+
