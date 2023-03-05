@@ -11,33 +11,16 @@ private:
 public:
 
     virtual void NormalAttack() override;
-    virtual void TauntPlayer() = 0;
+    virtual void TauntPlayer();
 
-    void SetEnemyAttack(int enemyattack)
-    {
-        eAttack = enemyattack;
-    }
-    void SetTauntPlayer(int enemytaunt)
-    {
-        eTaunt = enemytaunt;
-    }
-    void SetEnemyHealth(int enemyhealth)
-    {
-        eHealth = enemyhealth;
-    }
+    void SetEnemyAttack(int enemyattack);
+    void SetTauntPlayer(int enemytaunt);
+    void SetEnemyHealth(int enemyhealth);
 
-    int GetEnemyAttack()
-    {
-        return eAttack;
-    }
-    int GetEnemyHealth() const
-    {
-        return eHealth;
-    }
-    int GetEnemyTaunt() const
-    {
-        return eTaunt;
-    }
+	int GetEnemyAttack();
+	int GetEnemyHealth() const;
+	int GetEnemyTaunt() const;
+
 
 };
 

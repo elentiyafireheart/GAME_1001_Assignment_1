@@ -2,6 +2,6 @@
 class GameObject {
 private:
 public:
-    virtual void NormalAttack() = 0;
+    virtual void NormalAttack();
 
 };

@@ -10,14 +10,8 @@ private:
     int tauntAmount;
 public:
     virtual void TauntPlayer() override;
-    int GetTauntAmount() const
-    {
-        return tauntAmount;
-    }
-    void SetTauntAmount(const int amount)
-    {
-        tauntAmount = amount;
-    }
+    int GetTauntAmount() const;
+    void SetTauntAmount(const int amount);
 
 };
 

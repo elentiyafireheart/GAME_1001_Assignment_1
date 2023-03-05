@@ -19,12 +19,12 @@ void Player::SetHealth(int health)
     this->health = health;
 }
 
-void Player::GetName()
+string Player::GetName()
 {
     return name;
 }
 
-void Player::GetHealth()
+string Player::GetHealth()
 {
     return health;
 }

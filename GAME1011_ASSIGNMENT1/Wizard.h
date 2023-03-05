@@ -11,13 +11,7 @@ private:
 
 public:
     virtual void SpecialAttack() override;
-    int GetSpecialAttackAmount() const
-    {
-        return SpecialAttackAmount;
-    }
-    void SetSpecialAttackAmount(const int amount)
-    {
-        SpecialAttackAmount = amount;
-    }
+    int GetSpecialAttackAmount() const;
+    void SetSpecialAttackAmount(const int amount);
 
 };
