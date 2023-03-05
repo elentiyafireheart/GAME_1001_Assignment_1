@@ -24,7 +24,7 @@ string Player::GetName()
     return name;
 }
 
-string Player::GetHealth()
+int Player::GetHealth()
 {
     return health;
 }
