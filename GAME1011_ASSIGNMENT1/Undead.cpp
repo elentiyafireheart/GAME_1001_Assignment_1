@@ -14,3 +14,8 @@ void Undead::SetTauntAmount(const int amount)
 {
 	tauntAmount = amount;
 }
+
+string Undead::GetSpeciesName()
+{
+	return speciesName;
+}

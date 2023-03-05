@@ -13,5 +13,6 @@ public:
     virtual void TauntPlayer() override;
     int GetTauntAmount() const;
     void SetTauntAmount(const int amount);
+    string GetSpeciesName();
 };
 

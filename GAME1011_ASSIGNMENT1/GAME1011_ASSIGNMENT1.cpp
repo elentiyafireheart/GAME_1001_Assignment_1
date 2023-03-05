@@ -50,12 +50,19 @@ int main()
 			if (randomEnemy > 1 && randomEnemy < 50)
 			{
 				Orc* e1 = new Orc;
-			
+				e1->SetEnemyHealth(600);
+
+				cout << "An Enemy " << e1->GetSpeciesName() << " enters the battle..." << endl;
+				cout << "Health: " << e1->GetEnemyHealth() << endl;
+
 			}
 			else if (randomEnemy > 51 && randomEnemy < 100)
 			{
 				Undead* e2 = new Undead;
+				e2->SetEnemyHealth(500);
 
+				cout << "An Enemy " << e2->GetSpeciesName() << " enters the battle..." << endl;
+				cout << "Health: " << e2->GetEnemyHealth() << endl;
 			}
 		}
 		else if (battleReady == 2)
@@ -87,11 +94,18 @@ int main()
 			if (randomEnemy > 1 && randomEnemy < 50)
 			{
 				Orc* e1 = new Orc;
+				e1->SetEnemyHealth(600);
 
+				cout << "An Enemy " << e1->GetSpeciesName() << " enters the battle..." << endl;
+				cout << "Health: " << e1->GetEnemyHealth() << endl;
 			}
 			else if (randomEnemy > 51 && randomEnemy < 100)
 			{
 				Undead* e2 = new Undead;
+				e2->SetEnemyHealth(500);
+
+				cout << "An Enemy " << e2->GetSpeciesName() << " enters the battle..." << endl;
+				cout << "Health: " << e2->GetEnemyHealth() << endl;
 			}
 		}
 		else if (battleReady == 2)
