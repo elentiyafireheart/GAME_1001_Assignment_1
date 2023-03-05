@@ -18,7 +18,7 @@
     <ClCompile Include="GAME1011_ASSIGNMENT1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Classes.cpp">
+    <ClCompile Include="do not use.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">

@@ -129,7 +129,9 @@
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GAME1011_ASSIGNMENT1.cpp" />
-    <ClCompile Include="Classes.cpp" />
+    <ClCompile Include="do not use.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Knight.cpp" />
     <ClCompile Include="Orc.cpp" />

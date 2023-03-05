@@ -1,5 +1,5 @@
 #include <iomanip>
-
+#include "Enemy.h"
 #include "GameObject.h"
 
 using namespace std;
