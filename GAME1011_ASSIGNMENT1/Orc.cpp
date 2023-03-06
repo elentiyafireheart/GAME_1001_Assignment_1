@@ -1,8 +1,12 @@
 #include "Orc.h"
 
+#include <iostream>
+#include <ostream>
+
 void Orc::TauntPlayer()
 {
-	Enemy::TauntPlayer();
+	const int index = rand() % NUM_TAUNTS;
+	std::cout << taunts[index] << std::endl;
 }
 
 void Orc::SetTauntAmount(const int amount)

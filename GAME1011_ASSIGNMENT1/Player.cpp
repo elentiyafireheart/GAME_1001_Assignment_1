@@ -1,13 +1,32 @@
 #include "Player.h"
+
+#include <iostream>
 using namespace std;
 
-void Player::NormalAttack()
+void Player::TakeDamage(int damage,string name)
 {
+	if (health < 0)
+	{
+		health = 0;
+		std::cout << std::endl <<name<< " health = " << health << std::endl;
+	}
+	else {
+		std::cout << std::endl <<name<< " health = " << health - damage << std::endl;
+	}
+	health -= damage;
 }
 
-void Player::SpecialAttack()
+int Player::NormalAttack()
 {
+	return 10;
 }
+
+int Player::SpecialAttack()
+{
+    return GameObject::NormalAttack();
+
+}
+
 
 void Player::SetName(const std::string name)
 {

@@ -1,8 +1,13 @@
 #include "Wizard.h"
 
-void Wizard::SpecialAttack()
+string Wizard::GetSpecialAttackName()
 {
-	Player::SpecialAttack();
+	return SpecialAttackName;
+}
+
+int Wizard::SpecialAttack()
+{
+	return 30;
 }
 
 int Wizard::GetSpecialAttackAmount() const

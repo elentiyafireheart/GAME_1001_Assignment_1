@@ -8,10 +8,11 @@ class Player : public GameObject
 {
 private:
 	string name;
-    int health;
+    int health = 200;
 public:
-    virtual void NormalAttack() override;
-    virtual void SpecialAttack();
+    void TakeDamage(int damage,string name);
+    virtual int NormalAttack() override;
+    virtual int SpecialAttack();
     void SetName(const std::string name);
     void SetHealth(int health);
     string GetName();

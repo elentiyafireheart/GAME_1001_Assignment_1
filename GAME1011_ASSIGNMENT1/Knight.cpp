@@ -1,8 +1,13 @@
 #include "Knight.h"
 
-void Knight::SpecialAttack()
+string Knight::GetSpecialAttackName()
 {
-	Player::SpecialAttack();
+	return SpecialAttackName;
+}
+
+int Knight::SpecialAttack()
+{
+ return 30;
 }
 
 int Knight::GetSpecialAttackAmount() const

@@ -1,5 +1,6 @@
 #include "GameObject.h"
 
-void GameObject::NormalAttack()
+int GameObject::NormalAttack()
 {
+	return 10;
 }

@@ -1,8 +1,12 @@
 #include "Undead.h"
 
+#include <iostream>
+#include <ostream>
+
 void Undead::TauntPlayer()
 {
-	Enemy::TauntPlayer();
+	int index = rand() % NUM_TAUNTS;
+	std::cout << taunts[index] << std::endl;
 }
 
 int Undead::GetTauntAmount() const

@@ -10,7 +10,8 @@ private:
     int SpecialAttackAmount;
 
 public:
-    virtual void SpecialAttack() override;
+    string GetSpecialAttackName();
+    virtual int SpecialAttack() override;
     int GetSpecialAttackAmount() const;
     void SetSpecialAttackAmount(const int amount);
 

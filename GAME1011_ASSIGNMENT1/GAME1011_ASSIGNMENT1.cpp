@@ -54,19 +54,101 @@ int main()
 			if (randomEnemy > 1 && randomEnemy < 50) // Creates orc enemy
 			{
 				Orc* e1 = new Orc;
-				e1->SetEnemyHealth(600); // sets orc health to 600
+				e1->SetEnemyHealth(100); // sets orc health to 100
 
 				cout << "An Enemy " << e1->GetSpeciesName() << " enters the battle..." << endl;
 				cout << "Health: " << e1->GetEnemyHealth() << endl;
+				while (p1->GetHealth() > 0 && e1->GetEnemyHealth() > 0) {
+
+					cout << "\nEnemy "<< e1->GetSpeciesName() <<" taunts you!" << endl;
+					e1->TauntPlayer();
+					cout << p1->GetName() << " performs normal attack!" << endl;
+					cout << "Normal attack Dose: "<<p1->NormalAttack() <<" Damage!" << endl;
+					e1->TakeDamage(p1->NormalAttack(),e1->GetSpeciesName());
+
+					cout << "Enemy " << e1->GetSpeciesName() << " taunts you!" << endl;
+					e1->TauntPlayer();
+					cout << p1->GetName() << " performs special attack! " <<p1->GetSpecialAttackName()<< endl;
+					cout << "Special attack Dose: " << p1->SpecialAttack() << " Damage!" << endl;
+					e1->TakeDamage(p1->SpecialAttack(), e1->GetSpeciesName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e1->NormalAttack() << " Damage!" << endl;
+					p1->TakeDamage(e1->NormalAttack(),p1->GetName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e1->NormalAttack() << " Damage!" << endl;
+					p1->TakeDamage(e1->NormalAttack(), p1->GetName());
+
+					cout << p1->GetName() << " performs special attack! " << p1->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p1->SpecialAttack() << " Damage!" << endl;
+					e1->TakeDamage(p1->SpecialAttack(), e1->GetSpeciesName());
+
+					cout << "Enemy " << e1->GetSpeciesName() << " taunts you!" << endl;
+					e1->TauntPlayer();
+					cout <<p1->GetName()<< " performs special attack! " << p1->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p1->SpecialAttack() << " Damage!" << endl;
+					e1->TakeDamage(p1->SpecialAttack(), e1->GetSpeciesName());
+				}
+
+				if (p1->GetHealth() > 0) {
+					cout << "\nEnemy "<<e1->GetSpeciesName()<<" died!" << endl;
+					cout <<p1->GetName()<< " You win!" << endl;
+				}
+				else {
+					cout << "\nYou died!" << endl;
+					cout << "You lose!" << endl;
+				}
 
 			}
 			else if (randomEnemy > 51 && randomEnemy < 100) // creates undead enemy
 			{
 				Undead* e2 = new Undead;
-				e2->SetEnemyHealth(500); // sets undead health to 500
+				e2->SetEnemyHealth(100); // sets undead health to 500
 
 				cout << "An Enemy " << e2->GetSpeciesName() << " enters the battle..." << endl;
 				cout << "Health: " << e2->GetEnemyHealth() << endl;
+				while (p1->GetHealth() > 0 && e2->GetEnemyHealth() > 0) {
+
+					cout << "\nEnemy " << e2->GetSpeciesName() << " taunts you!" << endl;
+					e2->TauntPlayer();
+					cout << p1->GetName() << " performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << p1->NormalAttack() << " Damage!" << endl;
+					e2->TakeDamage(p1->NormalAttack(), e2->GetSpeciesName());
+
+					cout << "Enemy " << e2->GetSpeciesName() << " taunts you!" << endl;
+					e2->TauntPlayer();
+					cout << p1->GetName() << " performs special attack! " << p1->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p1->SpecialAttack() << " Damage!" << endl;
+					e2->TakeDamage(p1->SpecialAttack(), e2->GetSpeciesName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e2->NormalAttack() << " Damage!" << endl;
+					p1->TakeDamage(e2->NormalAttack(), p1->GetName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e2->NormalAttack() << " Damage!" << endl;
+					p1->TakeDamage(e2->NormalAttack(), p1->GetName());
+
+					cout << p1->GetName() << " performs special attack! " << p1->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p1->SpecialAttack() << " Damage!" << endl;
+					e2->TakeDamage(p1->SpecialAttack(), e2->GetSpeciesName());
+
+					cout << "Enemy " << e2->GetSpeciesName() << " taunts you!" << endl;
+					e2->TauntPlayer();
+					cout << p1->GetName() << " performs special attack! " << p1->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p1->SpecialAttack() << " Damage!" << endl;
+					e2->TakeDamage(p1->SpecialAttack(), e2->GetSpeciesName());
+				}
+
+				if (p1->GetHealth() > 0) {
+					cout << "\nEnemy " << e2->GetSpeciesName() << " died!" << endl;
+					cout << p1->GetName() << " You win!" << endl;
+				}
+				else {
+					cout << "\nYou died!" << endl;
+					cout << "You lose!" << endl;
+				}
 			}
 		}
 		else if (battleReady == 2)
@@ -102,6 +184,47 @@ int main()
 
 				cout << "An Enemy " << e1->GetSpeciesName() << " enters the battle..." << endl;
 				cout << "Health: " << e1->GetEnemyHealth() << endl;
+				while (p2->GetHealth() > 0 && e1->GetEnemyHealth() > 0) {
+
+					cout << "\nEnemy " << e1->GetSpeciesName() << " taunts you!" << endl;
+					e1->TauntPlayer();
+					cout << p2->GetName() << " performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << p2->NormalAttack() << " Damage!" << endl;
+					e1->TakeDamage(p2->NormalAttack(), e1->GetSpeciesName());
+
+					cout << "Enemy " << e1->GetSpeciesName() << " taunts you!" << endl;
+					e1->TauntPlayer();
+					cout << p2->GetName() << " performs special attack! " << p2->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p2->SpecialAttack() << " Damage!" << endl;
+					e1->TakeDamage(p2->SpecialAttack(), e1->GetSpeciesName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e1->NormalAttack() << " Damage!" << endl;
+					p2->TakeDamage(e1->NormalAttack(), p2->GetName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e1->NormalAttack() << " Damage!" << endl;
+					p2->TakeDamage(e1->NormalAttack(), p2->GetName());
+
+					cout << p2->GetName() << " performs special attack! " << p2->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p2->SpecialAttack() << " Damage!" << endl;
+					e1->TakeDamage(p2->SpecialAttack(), e1->GetSpeciesName());
+
+					cout << "Enemy " << e1->GetSpeciesName() << " taunts you!" << endl;
+					e1->TauntPlayer();
+					cout << p2->GetName() << " performs special attack! " << p2->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p2->SpecialAttack() << " Damage!" << endl;
+					e1->TakeDamage(p2->SpecialAttack(), e1->GetSpeciesName());
+				}
+
+				if (p2->GetHealth() > 0) {
+					cout << "\nEnemy " << e1->GetSpeciesName() << " died!" << endl;
+					cout << p2->GetName() << " You win!" << endl;
+				}
+				else {
+					cout << "\nYou died!" << endl;
+					cout << "You lose!" << endl;
+				}
 			}
 			else if (randomEnemy > 51 && randomEnemy < 100) // creates undead enemy
 			{
@@ -110,6 +233,47 @@ int main()
 
 				cout << "An Enemy " << e2->GetSpeciesName() << " enters the battle..." << endl;
 				cout << "Health: " << e2->GetEnemyHealth() << endl;
+				while (p2->GetHealth() > 0 && e2->GetEnemyHealth() > 0) {
+
+					cout << "\nEnemy " << e2->GetSpeciesName() << " taunts you!" << endl;
+					e2->TauntPlayer();
+					cout << p2->GetName() << " performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << p2->NormalAttack() << " Damage!" << endl;
+					e2->TakeDamage(p2->NormalAttack(), e2->GetSpeciesName());
+
+					cout << "Enemy " << e2->GetSpeciesName() << " taunts you!" << endl;
+					e2->TauntPlayer();
+					cout << p2->GetName() << " performs special attack! " << p2->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p2->SpecialAttack() << " Damage!" << endl;
+					e2->TakeDamage(p2->SpecialAttack(), e2->GetSpeciesName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e2->NormalAttack() << " Damage!" << endl;
+					p2->TakeDamage(e2->NormalAttack(), p2->GetName());
+
+					cout << "Enemy performs normal attack!" << endl;
+					cout << "Normal attack Dose: " << e2->NormalAttack() << " Damage!" << endl;
+					p2->TakeDamage(e2->NormalAttack(), p2->GetName());
+
+					cout << p2->GetName() << " performs special attack! " << p2->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p2->SpecialAttack() << " Damage!" << endl;
+					e2->TakeDamage(p2->SpecialAttack(), e2->GetSpeciesName());
+
+					cout << "Enemy " << e2->GetSpeciesName() << " taunts you!" << endl;
+					e2->TauntPlayer();
+					cout << p2->GetName() << " performs special attack! " << p2->GetSpecialAttackName() << endl;
+					cout << "Special attack Dose: " << p2->SpecialAttack() << " Damage!" << endl;
+					e2->TakeDamage(p2->SpecialAttack(), e2->GetSpeciesName());
+				}
+
+				if (p2->GetHealth() > 0) {
+					cout << "\nEnemy " << e2->GetSpeciesName() << " died!" << endl;
+					cout << p2->GetName() << " You win!" << endl;
+				}
+				else {
+					cout << "\nYou died!" << endl;
+					cout << "You lose!" << endl;
+				}
 			}
 		}
 		else if (battleReady == 2)
@@ -117,4 +281,5 @@ int main()
 			cout << "You ran from battle..." << endl;
 		}
 	}
+
 }
